@@ -1,10 +1,10 @@
 <?php
 
-namespace Oz\Component\Log;
+namespace anisM\Component\Log;
 
 // TODO : Here we got a 'Couplage Fort' between log entity and the component
 // Try to send the ORM Log as a parameter in the construct class or create the entity class here in the component....
-use Oz\ApiBundle\Entity\Log as Log;
+use anisM\ApiBundle\Entity\Log as Log;
 use Doctrine\ORM\EntityManager;
 
 /**
@@ -53,7 +53,7 @@ class LogFactory
     public function validParams($params)
     {
         // listing my Table fields
-        $logFields = $this->em->getClassMetadata('Oz\ApiBundle\Entity\Log')->getFieldNames();
+        $logFields = $this->em->getClassMetadata('anisM\ApiBundle\Entity\Log')->getFieldNames();
 
         // preparing my params : we take only correct Log fields from
         // sent params to the Factory.
